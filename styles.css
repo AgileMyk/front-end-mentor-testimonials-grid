@@ -1,0 +1,157 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+  box-sizing: border-box;
+  
+}
+
+:root {
+  
+  /* color pallette */
+  
+  --Moderate-violet: hsl(263, 55%, 52%); 
+  --Very-dark-bluegray: hsl(217, 19%, 35%); 
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%); 
+  --White: hsl(0, 0%, 100%);
+  
+  --Light-gray: hsl(0, 0%, 81%); 
+  --Light-bluegray: hsl(210, 46%, 95%);
+  
+  font-size: 13px;
+  
+  --barlowSM: 'Barlow Semi Condensed';
+}
+
+h1, quote {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: .9rem;
+  color: var(--Light-gray);
+}
+
+
+h3 {
+  font-size: 1.25rem;
+}
+
+quote {
+  color: var(--Light-gray);
+}
+
+main {
+  display: grid;
+  grid-template-rows: 2.5fr 1fr 1fr 2fr 2.5fr;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+  padding: 2em;
+  height: ;
+  width: 100vw;
+  background: hsl(0, 0%, 90%);
+}
+
+section {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: 15px;
+  font-family: --var('barlowSM');
+  box-shadow: 2px 8px -2px hsl(0, 0%, 81%);
+  transition: transform .25s ease-in .05s;
+}
+
+section:hover {
+  transform: scale(1.025);
+}
+
+.one, .three, .five {
+  transition: transform .25s ease-in .05s;
+}
+
+.one:hover, .three:hover, .five:hover {
+  transform: scale(1.025) rotate(1.75deg);
+}
+
+.two, .four {
+    transition: transform .25s ease-in .05s;
+}
+
+.two:hover, .four:hover {
+  transform: scale(1.025) rotate(-1.75deg);
+}
+
+/*  White heading colored sections */
+
+.one {
+  background: var(--Moderate-violet);
+}
+
+.one > h1, h3 {
+  color: var(--white);
+}
+
+.two {
+  background: var(--Very-dark-bluegray);
+}
+
+.two > h1, h3 {
+  color: var(--white);
+  
+}
+
+.four {
+  background: var(--Very-dark-blackish-blue);
+}
+
+.four > h1, h3 {
+  bagkrounc: var(--white);
+}
+
+/* Gray heading colored sections */ 
+
+.three > h1, h3 {
+  color: var(--Very-dark-bluegray);
+}
+
+.three, .five {
+  background: #fff;
+  color: var(--Light-gray);
+}
+
+.five > h1, h3 {
+    color: var(--Very-dark-bluegray);
+}
+
+
+@media screen and (min-width: 376px) {
+  main {
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 500px))));
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 400px));
+  }
+  
+  section {
+    max-width: 384px;
+  }
+}
+
+
+@media screen and (min-width: 700px) {
+  
+  
+    section {
+    max-width: ;
+  }
+  
+}
+
+@media screen and (min-width: 1440px) {
+  
+  
+    section {
+    max-width: ;
+  }
+  
+}
